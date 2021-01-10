@@ -1,0 +1,221 @@
+//导航栏
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+.accordion {
+  color: #FFF;
+  width: 100%;
+}
+.accordion .section {
+  width: 100%;
+}
+.accordion .section input[type='radio'] {
+  display: none;
+}
+.accordion .section input[type='radio']:checked + label {
+  background: #3867d6;
+}
+.accordion .section input[type='radio']:checked + label:before {
+  content: " ";
+  position: absolute;
+  border-left: 3px solid #21CCFC;
+  height: 100%;
+  left: 0;
+}
+.accordion .section input[type='radio']:checked ~ .content {
+  max-height: 300px;
+  opacity: 1;
+  z-index: 10;
+  overflow-y: auto;
+}
+.accordion .section label {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: table;
+  background: #3867d6;
+  width: 100%;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -ms-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.accordion .section label:before {
+  content: " ";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  border-top: 1px solid #3B3B98;
+}
+.accordion .section label:hover {
+  background: #3867d6;
+}
+.accordion .section label span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.accordion .section:last-of-type {
+  border-bottom: 1px solid #45aaf2;
+}
+.accordion .section .content {
+  max-height: 0;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+  position: relative;
+  overflow-y: hidden;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+body{
+   overflow:auto;/*如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。*//*这个属性最好只个body或者相对小级子元素，像home里一样，若是auto，下拉框在超出div时可能无法实现*/
+  background: #FFF;
+  font-family: 'Quicksand', sans-serif;
+  /*background-image: url('img/body.jpg');*/
+	background-image: url('img/d1.gif');
+	background-size:100%;
+  
+}
+
+.left-menu {
+  /*margin-top:240px;/*留出导航栏的位置*/
+  background: #2d98da;
+  width: 200px;
+  position: absolute;
+  top: 240px;
+  bottom: 0;
+  right:0;/*将导航栏置于最右*/
+}
+
+.accordion {
+  font-size: 14px;
+}
+.accordion .section .content {
+  padding: 0 15px;
+}
+.accordion .section input[type='radio'] {
+  display: none;
+}
+.accordion .section input[type='radio']:checked ~ .content {
+  padding: 15px;
+}
+
+ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul li {
+  padding: 10px;
+}
+ul li i {
+  font-size: 13px;
+  width: 15px;
+  margin-right: 15px;
+}
+ul li:hover {
+  cursor: pointer;
+}
+ul li:hover i {
+  color: #21CCFC;
+}
+
+.logo {
+  padding: 30px 10px;
+  width: 200px;
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+}
+.logo i {
+  font-size: 70px;
+  color: #21CCFC;
+}
+.ma{
+	margin-left: 17%;
+}
+
+
+.submit{
+	width: 65px;
+    height: 45px;
+    display: block;
+    margin: 2.5em auto 0;
+    background: #7efff5;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    font-size: 15px;
+   
+}
+
+
+.input{
+	position: relative;
+    margin: 10px auto;
+    width: 100%;
+}
+.input span{
+	text-align: center;
+	font-size: 1.3em;                                 /*  */
+}
+.form_input{
+	-web-kit-appearance: none;
+    -moz-appearance: none;
+    font-size: 1.3em;                                 /*  */
+    height: 1.5em;                                    /*  */
+	border-radius: 4px;
+	border: 1px solid #c8cccf;
+	color: #6a6f77;
+	outline: 0;
+	text-align: left; margin-left:2%; 
+}
+
+#h{
+	font-size: 2em;
+	margin-top: 2%;
+	color: #67e6dc;
+	font-family:"微软雅黑";
+	font-weight: bold;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.center{/*修改div大小使其他div不会因为覆盖而出现问题*/
+  	margin-top:0px;/*留出导航栏的位置*/
+	margin-left:13%;/*左边距*/
+	width:74%;/*宽度*/
+	/*border:4px solid red;*//*红线用于识别框*/
+}
